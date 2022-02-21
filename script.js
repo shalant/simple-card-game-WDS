@@ -12,7 +12,7 @@ document.addEventListener('click', () => {
     if (inRound) {
         cleanBeforeRound()
     } else {
-
+        flipCards()
     }
 })
 
@@ -31,9 +31,9 @@ function startGame() {
 
 function cleanBeforeRound() {
     inRound = false;
-    computerCardSlot.innerHTML = ''
-    playerCardSlot.innerHTML = ''
-    text.innerText = ''
+    computerCardSlot.innerHTML = ""
+    playerCardSlot.innerHTML = ""
+    text.innerText = ""
 
     updateDeckCount() 
 }
