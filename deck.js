@@ -24,13 +24,21 @@ export default class Deck {
         return this.cards.length
     }
 
+    pop() {
+        return this.cards.shift()
+    }
+
+    push(card) {
+        this.cards.push(card)
+    }
+
     shuffle() {
         // not-great method: this.cards.sort((a,b) => Math.random() - .5)
         for (let i = this.numberOfCards - 1; i > 0; i--) {
-            const newIndex = Math.floor(Math.random() * (i + 1));
-            const oldValue = this.cards[newIndex];
-            this.cards[newIndex] = this.cards[i];
-            this.cards[i] = oldValue;
+            const newIndex = Math.floor(Math.random() * (i + 1))
+            const oldValue = this.cards[newIndex]
+            this.cards[newIndex] = this.cards[i]
+            this.cards[i] = oldValue
         }
     }
 }
